@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم OZONE - تجربة طعام استثنائية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="شعار OZONE">
+                <h1>OZONE</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">عن المطعم</a></li>
+                <li><a href="#gallery">معرض الصور</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="fade-text-container">
+                <h2 class="fade-text">
+                    <span class="line1">مطعم OZONE</span>
+                    <span class="line2">تجربة طعم لا تُنسى</span>
+                </h2>
+            </div>
+            <p class="hero-subtitle">نقدم أشهى الأطباق في أجواء راقية تجمع بين الأصالة والحداثة</p>
+            <a href="#gallery" class="cta-button">اكتشف أطباقنا</a>
+        </div>
+    </section>
+
+    <!-- قسم عن المطعم -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="fade-text-container">
+                <h2 class="fade-text">
+                    <span class="line1">عن مطعم OZONE</span>
+                    <span class="line2">جودة وذوق رفيع</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>نحن في OZONE نؤمن أن الطعام ليس مجرد حاجة بيولوجية، بل هو تجربة ثقافية وفنية. لذلك نحرص على تقديم أطباقنا بأعلى معايير الجودة، مع الاهتمام بكل التفاصيل التي تجعل من وجبتك لحظة استثنائية.</p>
+                    <p>نستخدم أفضل المكونات الطازجة لنقدم لكم نكهات تتناسب مع أذواقكم المميزة، في أجواء راقية تتناسب مع جميع المناسبات.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/hero.jpg" alt="واجهة مطعم OZONE">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض صور المطعم -->
+    <section id="gallery" class="restaurant-gallery">
+        <div class="container">
+            <div class="fade-text-container">
+                <h2 class="fade-text">
+                    <span class="line1">أجواء OZONE</span>
+                    <span class="line2">راحة واسترخاء</span>
+                </h2>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slider" id="restaurant-slider">
+                    <div class="slide active">
+                        <img src="images/place1.jpg" alt="جلسات ليلية في OZONE">
+                        <div class="slide-caption">جلسات ليلية هادئة</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/place2.jpg" alt="حديقة OZONE في النهار">
+                        <div class="slide-caption">حديقة المطعم في النهار</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/hero.jpg" alt="واجهة مطعم OZONE">
+                        <div class="slide-caption">واجهة المطعم الفاخرة</div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="prevRestaurantSlide()"><i class="fas fa-chevron-right"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToRestaurantSlide(0)"></span>
+                        <span class="dot" onclick="goToRestaurantSlide(1)"></span>
+                        <span class="dot" onclick="goToRestaurantSlide(2)"></span>
+                    </div>
+                    <button class="slider-btn next-btn" onclick="nextRestaurantSlide()"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض صور الطعام -->
+    <section class="food-gallery">
+        <div class="container">
+            <div class="fade-text-container">
+                <h2 class="fade-text">
+                    <span class="line1">أطباقنا المميزة</span>
+                    <span class="line2">نكهات تخطف الأنفاس</span>
+                </h2>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slider" id="food-slider">
+                    <div class="slide active">
+                        <img src="images/food1.jpg" alt="برغر OZONE">
+                        <div class="slide-caption">برغر OZONE الخاص</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food2.jpg" alt="سلطة طازجة">
+                        <div class="slide-caption">سلطة طازجة بالمكونات الموسمية</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food3.jpg" alt="فطور OZONE">
+                        <div class="slide-caption">فطور OZONE الشهي</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/food4.jpg" alt="وافل OZONE">
+                        <div class="slide-caption">وافل OZONE الحلو</div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="prevFoodSlide()"><i class="fas fa-chevron-right"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="goToFoodSlide(0)"></span>
+                        <span class="dot" onclick="goToFoodSlide(1)"></span>
+                        <span class="dot" onclick="goToFoodSlide(2)"></span>
+                        <span class="dot" onclick="goToFoodSlide(3)"></span>
+                    </div>
+                    <button class="slider-btn next-btn" onclick="nextFoodSlide()"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="fade-text-container">
+                <h2 class="fade-text">
+                    <span class="line1">تواصل معنا</span>
+                    <span class="line2">نحن هنا لخدمتك</span>
+                </h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon phone-icon">
+                            <div class="phone-receiver"></div>
+                            <div class="phone-body"></div>
+                        </div>
+                        <div class="contact-details">
+                            <h3>اتصل بنا</h3>
+                            <p class="phone-number">+24915588417</p>
+                            <p>نحن متاحون يومياً من 10 صباحاً حتى 12 منتصف الليل</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon facebook-icon" onclick="window.open('https://www.facebook.com/share/1JdXZdM7q3/', '_blank')">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>صفحتنا على فيسبوك</h3>
+                            <p>تابعنا على فيسبوك لمعرفة آخر العروض والأطباق الجديدة</p>
+                            <a href="https://www.facebook.com/share/1JdXZdM7q3/" target="_blank" class="social-link">facebook.com/OZONE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon map-icon" onclick="window.open('https://maps.app.goo.gl/S2ziU6fT67gtucqH9', '_blank')">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>موقعنا على الخريطة</h3>
+                            <p>زورنا في موقعنا واستمتع بتجربة OZONE الفريدة</p>
+                            <a href="https://maps.app.goo.gl/S2ziU6fT67gtucqH9" target="_blank" class="social-link">عرض على خرائط جوجل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-hours">
+                    <h3>أوقات العمل</h3>
+                    <ul>
+                        <li><span>الأحد - الخميس:</span> 10:00 صباحاً - 12:00 منتصف الليل</li>
+                        <li><span>الجمعة - السبت:</span> 12:00 ظهراً - 1:00 صباحاً</li>
+                        <li><span>العطلات الرسمية:</span> 12:00 ظهراً - 1:00 صباحاً</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.jpg" alt="شعار OZONE">
+                    <h2>OZONE</h2>
+                    <p>مطعم OZONE &copy; 2023. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">عن المطعم</a></li>
+                        <li><a href="#gallery">معرض الصور</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>تابعنا</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1JdXZdM7q3/" target="_blank" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://maps.app.goo.gl/S2ziU6fT67gtucqH9" target="_blank" class="social-icon map">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
